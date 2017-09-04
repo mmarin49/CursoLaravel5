@@ -10,6 +10,7 @@
                 <div class="panel-body">
                     Estás registrado!!
                     You are log in!
+                    Bienvenido al área de clientes
                 </div>
             </div>
         </div>
