@@ -8,9 +8,13 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
+<<<<<<< HEAD
                     Estás registrado!!
                     You are log in!
                     Bienvenido al área de clientes
+=======
+                    Estás registrado!
+>>>>>>> 3795d003b4fb141a4c952a11086c906fd642ba82
                 </div>
             </div>
         </div>
