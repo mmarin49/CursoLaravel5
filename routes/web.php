@@ -26,4 +26,14 @@ Route::group(['middleware'=>'auth'],function ()
 Route::group(['middleware'=>'admin','prefix'=>'administration'],function ()
 {
     Route::get('/','AdminController@index')->name('admin.panel');
+
+    Route::resource('user','Admin\UserController',[
+        'as'=>'admin'
+    ]);
+    Route::resource('pizza','Admin\PizzaController',[
+        'as'=>'admin'
+    ]);
+    Route::resource('ingredients','Admin\IngredientController',[
+        'as'=>'admin'
+    ]);
 });
