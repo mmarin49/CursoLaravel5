@@ -3,7 +3,7 @@
 namespace PizzaApp\Http\Controllers\Admin;  
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use PizzaApp\Http\Requests;
 use PizzaApp\Http\Controllers\Controller;
 use PizzaApp\Ingredient;
 
