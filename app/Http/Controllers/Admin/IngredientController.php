@@ -1,6 +1,7 @@
 <?php
 
-namespace PizzaApp\Http\Controllers\Admin;  
+namespace PizzaApp\Http\Controllers\Admin;
+
 
 use Illuminate\Http\Request;
 use PizzaApp\Http\Requests;
@@ -33,17 +34,14 @@ class IngredientController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
      * @param Requests\IngredientRequest $ingredientRequest
-     * @return \Illuminate\Http\Response
-     * @internal param \Illuminate\Http\Request $request
+     * @return mixed
      */
     public function store(Requests\IngredientRequest $ingredientRequest)
     {
-
+        Ingredient::create($ingredientRequest-input());
+        return redirect('admin/ingredients/index')->with('message','El ingrediente se ha creado!!');
     }
-
     /**
      * Display the specified resource.
      *
