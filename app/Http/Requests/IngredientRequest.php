@@ -27,7 +27,7 @@ class IngredientRequest extends FormRequest
             case 'GET':
             case 'DELETE':
                 return [];
-            case 'POST'
+	        case 'POST':
                 return[
                     'name' => 'required|unique:ingredients|max:255',
                     'price' => 'required'
@@ -37,7 +37,7 @@ class IngredientRequest extends FormRequest
                 return[
                     'name' => 'required|max:255|unique:ingredients,name'.$this->segment(3),
                     'price' => 'required'
-                ]
+                ];
             default:break;
         }
     }
@@ -48,9 +48,9 @@ class IngredientRequest extends FormRequest
     public function messages()
     {
         return[
-            'name.required' => 'El nombre del ingrediente es requerido'
-            'name.unique' => 'Este ingrediente ya existe'
+            'name.required' => 'El nombre del ingrediente es requerido',
+            'name.unique' => 'Este ingrediente ya existe',
             'price.required' => 'El precio es requerido'
-        ]
+        ];
     }
 }

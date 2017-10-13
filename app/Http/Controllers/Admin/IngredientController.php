@@ -4,6 +4,7 @@ namespace PizzaApp\Http\Controllers\Admin;
 
 
 use Illuminate\Http\Request;
+use PizzaApp\App\Http\Requests\IngredientRequest;
 use PizzaApp\Http\Requests;
 use PizzaApp\Http\Controllers\Controller;
 use PizzaApp\Ingredient;
@@ -33,13 +34,14 @@ class IngredientController extends Controller
         return view('admin.ingredients.create')->withIngredient($ingredient);
     }
 
-    /**
-     * @param Requests\IngredientRequest $ingredientRequest
-     * @return mixed
-     */
-    public function store(Requests\IngredientRequest $ingredientRequest)
+	/**
+	 * @param IngredientRequest $ingredientRequest
+	 *
+	 * @return \Illuminate\Http\RedirectResponse
+	 */
+    public function store(IngredientRequest $ingredientRequest)
     {
-        Ingredient::create($ingredientRequest-input());
+        Ingredient::create($ingredientRequest->input());
         return redirect('admin/ingredients/index')->with('message','El ingrediente se ha creado!!');
     }
     /**

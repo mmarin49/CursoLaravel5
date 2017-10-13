@@ -31,7 +31,7 @@ class AddFkUsersRoleId extends Migration
         Schema::table('users',function ($table)
         {
             DB::statement('SET FOREIGN_KEY_CHECKS=0');
-            $table->dropfoeringn(['role_id']);
+            $table->dropForeign(['role_id']);
             $table->dropColumn('role_id');
             DB::statement('SET FOREIGN_KEY_CHECKS=1');
         }

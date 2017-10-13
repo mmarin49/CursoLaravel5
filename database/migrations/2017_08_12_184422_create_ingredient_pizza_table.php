@@ -16,9 +16,9 @@ class CreateIngredientPizzaTable extends Migration
     {
         Schema::create('ingredient_pizza', function (Blueprint $table) {
             $table-> integer('pizza_id')->unsigned();
-            $table->foreign('pizza_id')->references('id')->on ('pizzas');
+            $table->foreign('pizza_id')->references('id')->on('pizzas');
             $table-> integer('ingredient_id')->unsigned();
-            $table->foreign('ingredient_id')->references('id')->on ('ingredients');
+            $table->foreign('ingredient_id')->references('id')->on('ingredients');
 
         });
     }
@@ -30,8 +30,8 @@ class CreateIngredientPizzaTable extends Migration
      */
     public function down()
     {
-        DB::statements('SET FOREIGN_KEY_CHECKS = 0');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('ingredient_pizza');
-        DB::statements('SET FOREIGN_KEY_CHECKS = 1');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }
