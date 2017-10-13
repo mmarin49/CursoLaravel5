@@ -1,11 +1,14 @@
 <?php
 
-namespace PizzaApp\Http\Controllers\Admin;
-
+namespace PizzaApp\Http\Controllers\Admin;  
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use PizzaApp\App\Http\Requests\IngredientRequest;
 use PizzaApp\Http\Requests;
+=======
+use App\Http\Requests;
+>>>>>>> parent of 5f08a81... cambios_a_171212
 use PizzaApp\Http\Controllers\Controller;
 use PizzaApp\Ingredient;
 
@@ -34,6 +37,7 @@ class IngredientController extends Controller
         return view('admin.ingredients.create')->withIngredient($ingredient);
     }
 
+<<<<<<< HEAD
 	/**
 	 * @param IngredientRequest $ingredientRequest
 	 *
@@ -43,7 +47,20 @@ class IngredientController extends Controller
     {
         Ingredient::create($ingredientRequest->input());
         return redirect('admin/ingredients/index')->with('message','El ingrediente se ha creado!!');
+=======
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param Requests\IngredientRequest $ingredientRequest
+     * @return \Illuminate\Http\Response
+     * @internal param \Illuminate\Http\Request $request
+     */
+    public function store(Requests\IngredientRequest $ingredientRequest)
+    {
+
+>>>>>>> parent of 5f08a81... cambios_a_171212
     }
+
     /**
      * Display the specified resource.
      *
